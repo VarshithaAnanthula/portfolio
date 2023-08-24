@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #222;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+        
+        #about {
+            padding: 50px 0;
+            overflow: hidden; /* Prevent horizontal scrolling */
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            width: 75%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+
+        .about-container img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .about-text {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgb(53, 75, 75);
+            margin-left: 20px; /* Create space between image and text */
+        }
+
+        .contact-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: black;
+            font-size: 24px;
+        }
+
+        footer {
+            
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+        }
+
+        footer p h3{
+            color: black;
+        }
+
+        footer i {
+            margin: 0 10px;
+        }
+        .about-text{
+            width: 100%;
+            color: #fff;
+            margin-top: 10px;
+            border-radius: 8px;
+            margin-left: 6%;
+            margin-right: 8%;
+            padding: 0.5rem 1rem 5.5rem 2rem;
+            background: transparent;
+        }
+        
+        .about-container img{
+                margin-left: 10%;
+                border-radius:15px;
+                
+        }
+        .about-container{
+            width: 100%;
+            padding: 1rem;
+        }
+        .header {
+            background-color: #010101;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .logo span {
+            color: #2d2d2d;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .nav-icons {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #FFC107;
+        }
+        .cert-top {
+            padding: 0 0 100px 0;
+        }
+
+        #certifications {
+            
+            padding: 50px 0;
+        }
+
+        .certifications-container {
+            width: 95%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 5px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #114f6e; /* Cyan shadow effect */
+        }
+        
+
+        .certifications-title {
+            display: flex;
+            margin-left: 40% ;
+            align-items: center; /* Align vertically */
+            margin-bottom: 30px;
+            color: #FFF;
+            text-shadow: 2px 2px 4px #114a6e;
+        }
+
+        .certifications-title img {
+            margin-right: 10px; /* Add some spacing between the icon and text */
+        }
+
+        
+        .certificates {
+            height: auto;
+            padding: 0 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .certificates img {
+
+            border-radius: 8px;
+            margin-bottom: 15px;
+            width: 100px;
+            height: 60px;
+        }
+
+        .certificates-box {
+            
+            margin-right: 80px;
+            padding: 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgb(177, 177, 177), 2px 2px 5px rgb(177, 177, 177);
+            transition: 0.3s ease-in-out;
+            height: 110px;
+            width: 110px;
+        }
+
+        .certificates-box:hover {
+            box-shadow: 0px 5px 15px #0c586b;
+            cursor: pointer;
+        }
+
+        .certificates-box h2 {
+            font-size: 18px;
+            color: rgb(4, 81, 113);
+            margin: 5px 0;
+        }
+
+        .certificates-box p {
+            color: rgb(99, 99, 99);
+            margin: 5px 0;
+            
+
+        }
+        .content img{
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            margin-top: 5px;
+        }
+
+        .a{
+            background-color: #344a72;
+            padding-bottom: 25px;
+            padding-top: 25px;
+            margin-top: 10px;
+        }
+        .btn {
+            background-color: rgba(0, 255, 255, 0.5);
+            padding: 5px 7px;
+            border-radius: 30px;
+            color: white;
+            transition: 0.4s ease-in-out;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: rgb(159, 208, 248);
+            color: black;
+        }
+        .contact-title {
+            margin-bottom: 20px;
+            color: black;
+            
+            
+        }
+
+        
+        body {
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        #n{
+            color: #000;
+        }
+
+
+    </style>
+</head>
+<body width="100">
+    <div class="header">
+        <div class="logo">Varshitha <span>Ananthula</span></div>
+        <div class="nav-links">
+            
+            <div class="nav-icons">
+                <a href="#home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="https://major-project-full-stack-bwbk1tu4m-varshithaananthula.vercel.app/">My Projects</a>
+                <a href="resume.png">Resume</a>
+                <a href="#certifications">My Certifications</a>
+                <a href="#contact">Contact Me</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <section id="about">
+        <div class="about-container">
+            <img src ="WhatsApp Image 2023-08-24 at 9.19.56 PM.jpeg" width="200px" heigh="200px">
+            
+            <div class="about-text">
+                <h2>Hello, I'm Varshitha Ananthula</h2>
+                <p>Greetings! I'm a passionate software developer with a knack for turning ideas into functional, elegant code. My journey in the world of technology began with an insatiable curiosity about how things work, which naturally led me to the realm of programming. I thrive on solving complex puzzles and turning intricate challenges into streamlined solutions.</p>
+            </div>
+            <div class="about-image"></div>
+        </div>
+    </section>
+    <section id="certifications">
+        <div class="certifications-container">
+            
+            <h2 class="certifications-title"><img src="badge-icon-png-12502.png" width="40px" height="40px" alt=""><img src="badge-icon-png-12502.png"  width="40px" height="40px" alt="">Certifications </h2>
+            <div class="certificates">
+                <div class="cert-top" id="courses">
+        
+                    <section class="certificates">
+                        <div class="certificates-box">
+                            <h2>Full Stack Web Development </h2>
+                            <a href="web-dev-codinza.png" class="btn started course">View</a>
+                        </div>
+        
+                        <div class="certificates-box">
+                            <h2>Intoduction to NLP- GreatLearning</h2>
+                            <a href="NLP certificate Great Learning.jpg" class="btn started course">View</a>
+        
+                        </div>
+                        <div class="certificates-box">
+                            <h2>&nbsp;&nbsp;OOPs in C++ -GreatLearning</h2>
+                            <a href="CPP cerificate Great Learning.jpg" class="btn started course">View</a>
+                        </div>
+                        <div class="certificates-box">
+                            <h2>My SQL Basics- GreatLearning</h2>
+                            <a href="MySQL cerificate Great Learning.jpg" class="btn started course">View</a>
+        
+                        </div>
+                        <div class="certificates-box">
+                            <h2>AI Foundation- Hexart.In</h2>
+                            <a href="AI-Foundation-hexart.png" class="btn started course">View</a>
+        
+                        </div>
+                        
+                    </section>
+                    <br><br><br><br>
+                    <section class="certificates">
+                        <div class="certificates-box">
+                            <h2>CPP programming- My Captain </h2>
+                            <a href="cpp-MyCaptain.png" class="btn started course">View</a>
+                        </div>
+        
+                        <div class="certificates-box">
+                            <h2>Java programming- My Captain</h2>
+                            <a href="Java-Mycaptain.png" class="btn started course">View</a>
+        
+                        </div>
+                        <div class="certificates-box">
+                            <h2>Cob Web - Medhanvesh 2023</h2>
+                            <a href="Medhanvesh-cobweb.png" class="btn started course">View</a>
+                        </div>
+                        <div class="certificates-box">
+                            <h2>Linked In Certifications</h2>
+                            <a href="https://drive.google.com/file/d/1VkCaJtHUDDz2mkOe964UhMg-MAu8PTts/view?usp=sharing" class="btn started course">View</a>
+        
+                        </div>
+                        
+                    </section>
+                    
+                <!-- Certificates content goes here -->
+            </div>
+            
+            
+        </div>
+        
+    </section>
+
+    
+        
+        <footer class="footer" id = "contact">
+            <h2 class="contact-title">Contact Me</h2>
+            <div class="footer-left">
+                
+                <a href="mailto:ananthulavarshitha458@gmail.com" id="n"><p>ananthulavarshitha458@gmail.com</p></a>
+            </div>
+            <div class="footer-right">
+                <h3 id="n">Find Me On </h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ananthula-varshitha-0973b1225/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/VarshithaAnanthula"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    
+                </div>
+            </div>
+                
+            </div>
+            <p id = "n">&copy; 2023 Varshitha Ananthula. All rights reserved.</p>
+        </footer>
+</body>
+</html>
+
