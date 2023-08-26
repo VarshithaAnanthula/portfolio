@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -269,6 +271,62 @@
             
             
         }
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            header {
+                padding: 5px;
+                width: 100%;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .nav-icons {
+                margin-top: 10px;
+            }
+
+            .nav-links a {
+                margin: 2px 6px;
+            }
+            .about-container {
+                
+                flex-direction: column;
+                
+                
+            }
+            
+            .about-text {
+                font-size: 2px;
+                flex-direction: column;
+                width: 100%;
+                font-size: x-small;
+                margin-left: 10px;
+                
+            }
+
+            .about-container img {
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+            .about-text {
+                margin: 0;
+            }
+
+            .certifications-container {
+                display: none; /* Hide the certifications section */
+            }
+            #nn{
+                display: none;
+            }
+        }
+
 
         
         body {
@@ -277,7 +335,6 @@
         #n{
             color: #000;
         }
-
 
     </style>
 </head>
@@ -291,7 +348,7 @@
                 <a href="#about">About Me</a>
                 <a href="https://major-project-full-stack-bwbk1tu4m-varshithaananthula.vercel.app/">My Projects</a>
                 <a href="resume.png">Resume</a>
-                <a href="#certifications">My Certifications</a>
+                <a href="#certifications" id="nn">My Certifications</a>
                 <a href="#contact">Contact Me</a>
             </div>
         </div>
@@ -390,7 +447,7 @@
                     <a href="https://github.com/VarshithaAnanthula"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/varshitha_ananthula/"><i class="fab fa-instagram"></i></a>
                     
                 </div>
             </div>
